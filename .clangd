@@ -1,0 +1,32 @@
+CompileFlags:
+  CompilationDatabase: build
+  Add:
+    - -Wno-pointer-bool-conversion
+
+Index:
+  Background: Build
+
+Diagnostics:
+  ClangTidy:
+    Add:
+      - bugprone-*
+      - performance-*
+      - readability-*
+    Remove:
+      - readability-braces-around-statements
+      - readability-implicit-bool-conversion
+      - readability-uppercase-literal-suffix
+      - readability-identifier-length
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+
+Hover:
+  ShowAKA: Yes
+
+Completion:
+  AllScopes: Yes
+  ArgumentLists: FullPlaceholders
+
